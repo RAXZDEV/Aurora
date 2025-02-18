@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aurora.</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lexend Giga", sans-serif;
+}
+:root{
+    --dark: hsla(238, 65%, 7%, 1);
+    --border: hsla(238, 40%, 15%, 1);
+    --accent: #5794FF;
+    --paragraph-light: hsla(237, 20%, 84%, 1);
+    --paragraph-dark: hsla(237, 6%, 40%, 1);
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    line-height: 2.2vw;
+    color: var(--paragraph-dark);
+    letter-spacing: -0.07vw
+}
+.sec1{
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background: var(--dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    padding-top: 2.5vw;
+}
+.sec1 nav{
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1vw 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--dark);
+    border-bottom: 1px solid var(--border);
+    z-index: 99;
+}
+.sec1 nav ul{
+    list-style: none;
+    display: flex;
+    gap: 5vw;
+    font-size: 1.2vw
+}
+nav ul li{
+    transition: 0.3s;
+    color: #fff;
+    white-space: nowrap;
+}
+nav ul li:hover{
+    color: var(--border);
+    filter: saturate(120%) brightness(200%);
+    text-shadow: 0 0 5px var(--border), 0 0 20px var(--border);
+}
+.sec1 nav #logo h1{
+    font-size: 2vw;
+}
+.sec1 nav button{
+    padding: 1.1vw 2.5vw;
+    font-size: 1.2vw;
+    background: transparent;
+    color: #fff;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+.sec1 nav button:hover{
+    background: var(--border);
+    filter: saturate(120%) brightness(150%);
+    box-shadow: 0 0 5px var(--border), 0 0 20px var(--border);
+}
+.sec1 .h1C{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    gap: 2vw;
+}
+.sec1 .h1C h1{
+    font-size: 12vw;
+    text-align: center;
+    line-height: 10vw;
+    background: linear-gradient(-45deg, #fff 30%, #CBCEFF 40%, #fff 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.sec1 .h1C h2{
+    height: 7vw;
+    width: 7vw;
+    position: absolute;
+    top: -7%;
+    left: 5%;
+    font-weight: 200;
+    transform: rotate(0deg);
+    animation: spin 5s infinite linear;
+    transform-origin: center;
+    background: linear-gradient(-45deg, #fff 30%, #CBCEFF 40%, #fff 70%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+@keyframes spin{
+    to{
+        transform: rotate(365deg);
+    }
+}
+.sec1 .h1C h3{
+    font-size: 2.2vw;
+    position: absolute;
+    top: -10%;
+    right: 5%
+}
+.sec1 .h1C p{
+    width: 40%;
+    font-size: 1.3vw;
+    color: var(--paragraph-light);
+}
+.sec2{
+    width: 100vw;
+    overflow: hidden;
+    background: #EBF8FF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--dark);
+    position: relative;
+    padding: 10vw 4vw;
+}
+.sec2 .left{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    width: 50%;
+}
+.sec2 .left h2{
+    color: var(--accent);
+    font-size: 2.2vw;
+}
+.sec2 .left h1{
+    font-size: 4vw;
+    line-height: 4vw;
+    color: var(--dark);
+}
+.sec2 .left p{
+    font-size: 1.4vw;
+}
+.sec2 .left div{
+    padding: 2vw 0;
+}
+.sec2 .left div button{
+    font-size: 1.2vw;
+    padding: 0.7vw 2.2vw;
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+.sec2 .left div button:hover{
+    background: #000;
+    color: #fff;
+}
+.sec2 .right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    border-left: 1px solid #BACFD9
+}
+.sec2 .right div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+    padding: 2vw;
+}
+.sec2 .right div h1{
+    font-size: 4.5vw;
+    display: flex;
+    gap: 1vw;
+}
+.sec2 .right div h1 span{
+    font-size: 3vw;
+    color: var(--accent);
+}
+.sec2 .right div p{
+    font-size: 1.4vw
+}
+.sec3{
+    width: 100vw;
+    overflow: hidden;
+    background: #EBF8FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--dark);
+    position: relative;
+    padding: 0vw 4vw;
+    gap: 4vw;
+    padding-bottom: 2vw
+}
+.sec3 .textC,
+.sec4 .textC,
+.sec5 .textC{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 2vw
+}
+.sec3 .textC h1,
+.sec4 .textC h1,
+.sec5 .textC h1{
+    font-size: 4.5vw;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.sec3 .textC span,
+.sec4 .textC span,
+.sec5 .textC span{
+    color: var(--accent);
+    font-size: 2.2vw;
+}
+.sec3 .textC p,
+.sec4 .textC p,
+.sec5 .textC p{
+    width: 50%;
+    font-size: 1.4vw
+}
+.sec3 .imgC{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sec3 .imgC div{
+    height: calc(80vw / 3);
+    width: calc(80vw / 3);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.sec3 .imgC #box1{
+    border-top-left-radius: 10vw;
+    background-image: url(stock/cash.jpg);
+}
+.sec3 .imgC #box2{
+    background-image: url(stock/pay.jpg);
+}
+.sec3 .imgC #box3{
+    background-image: url(stock/graph.jpg);
+}
+.sec3 .imgC div h1{
+    color: #fff;
+    background: hsla(235, 0%, 0%, 0.3);
+    width: 100%;
+    padding: 1vw;
+    backdrop-filter: blur(5px);
+    line-height: 2.8vw;
+    font-weight: 600;
+    font-size: 2.5vw
+}
+.sec4{
+    width: 100vw;
+    overflow: hidden;
+    background: #EBF8FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark);
+    position: relative;
+    padding: 8vw 4vw;
+    gap: 4vw;
+}
+.videoC {
+    width: 100vw;
+    position: relative;
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.sec4 .videoC video{
+    width: 100%;
+    caret-color: var(--accent);
+}
+#play{
+    height: 12vw;
+    width: 12vw;
+    background: var(--accent);
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    box-shadow: 0 0 30px hsla(197, 0%, 0%, 0.3)
+}
+#play .before{
+    position: absolute;
+    height: 40%;
+    width: 40%;
+    background: black;
+    clip-path: polygon(100% 50%, 16% 0, 16% 100%);
+    pointer-events: none;
+    transition: 0.3s
+}
+.sec5{
+    width: 100vw;
+    overflow: hidden;
+    background: #EBF8FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark);
+    position: relative;
+    padding: 0vw 4vw;
+    gap: 4vw;
+    padding-top: 0;
+}
+.sec5 .advantageC{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw
+}
+.sec5 .advantageC div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid hsla(0, 0%, 80%, 1);
+    padding: 3vw 4vw;
+    border-radius: 10px
+}
+.sec5 .advantageC div h2{
+    font-size: 2.2vw;
+    color: hsla(0, 0%, 50%, 1);
+    transition: 0.3s;
+    transform: translateX(0);
+}
+.sec5 .advantageC div:hover h2 {
+    color: var(--dark);
+    transform: translateX(5%);
+}
+.sec5 .advantageC div span svg{
+    fill: hsla(0, 0%, 50%, 1);
+    transition: 0.3s;
+    transform: rotate(-45deg)
+}
+.sec5 .advantageC div:hover svg{
+    fill: var(--accent);
+    transform: rotate(0deg)
+}
+#fixed{
+    height: 20vw;
+    width: 15vw;
+    /*background: var(--accent);*/
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 30%;
+    left: 65%;
+    z-index: 99;
+    border-top-right-radius: 7vw;
+    display: none;
+    pointer-events: none;
+    box-shadow: 0 0 20px hsla(235, 0%, 0%, 0.1);
+}
+.sec5 .infiniteC{
+    width: max-content;
+    background: var(--accent);
+    display: flex;
+    padding: 3vw 2vw;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+    margin-top: 5vw;
+    animation: slide 60s infinite linear alternate;
+}
+@keyframes slide{
+    from{
+        transform: translateX(41%);
+    }
+    to{
+        transform: translateX(-41%);
+    }
+}
+.sec5 .infiniteC h1{
+    font-size: 6vw;
+    font-weight: 900
+}
+.sec5 .infiniteC span{
+    display: inline-block;
+    height: 5vw;
+    width: 5vw;
+    background: var(--dark);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.sec6{
+    width: 100vw;
+    overflow: hidden;
+    background: var(--dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--paragraph-light);
+    position: relative;
+    padding: 8vw 4vw;
+    gap: 10vw;
+}
+.light{
+    height: 20vw;
+    width: 20vw;
+    background: var(--accent);
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    mix-blend-mode: lighten;
+    opacity: 0.8;
+}
+#light1{
+    top: -10%;
+    left: -10%;
+}
+#light2{
+    bottom: -10%;
+    right: -10%;
+}
+#light3{
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.sec6 .textC{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+.sec6 .textC .h1C,
+.sec7 .textC .h1C{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.sec6 .textC .h1C h1,
+.sec7 .textC .h1C h1{
+    background: linear-gradient(-45deg, #fff 30%, #CBCEFF 40%, #fff 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4.5vw;
+    width: 70%;
+}
+.sec6 .textC .h1C span,
+.sec7 .textC .h1C span{
+    font-size: 2.2vw;
+    color: var(--paragraph-light);
+}
+.sec6 .textC p{
+    font-size: 1.4vw;
+    color: var(--paragraph-light);
+    width: 60%;
+}
+.sec6 .logoC{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    row-gap: 10vw
+}
+.sec6 .logoC div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scrollLoop{
+    width: 100vw;
+    background: var(--accent);
+    padding: 3vw 0;
+    overflow: hidden;
+    position: relative;
+}
+.scrollLoop .infiniteC{
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    gap: 8vw;
+    color: var(--dark);
+    transform: translateX(0%);
+}
+.scrollLoop .infiniteC h1{
+    font-size: 7vw;
+    font-weight: 800;
+}
+.scrollLoop .infiniteC button{
+    font-size: 7vw;
+    padding: 2vw 8vw;
+    border-radius: 100px;
+    background: var(--dark);
+    color: var(--accent);
+    border: none;
+    font-weight: 800;
+}
+.sec7{
+    width: 100vw;
+    overflow: hidden;
+    background: var(--dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    padding: 6vw 4vw;
+    padding-bottom: 2vw;
+    gap: 0vw;
+}
+.sec7 .textC{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+.sec7 p{
+    font-size: 1.4vw;
+    color: var(--paragraph-light);
+}
+.sec7 .textC .contend{
+    display: flex;
+    gap: 4vw;
+    margin-top: 5vw
+}
+.sec7 .textC .contend .aboutC{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.sec7 .textC .contend .aboutC h1{
+    font-size: 3vw;
+    display: flex;
+}
+.sec7 .textC .contend .aboutC h1 span{
+    font-weight: 1200;
+    color: var(--accent);
+}
+.sec7 .textC .contend .mailC{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw
+}
+.sec7 .textC .contend .mailC h2{
+    font-size: 2vw;
+    color: #9BA5C6;
+}
+.sec7 .socialC{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 16vw
+}
+.sec7 .socialC img{
+    width: 40vw;
+    height: 23vw;
+    object-fit: cover;
+}
+.sec7 .socialC .social{
+    height: 100%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10vw
+}
+.sec7 .socialC .social div h2{
+    font-size: 3vw;
+    color: #9BA5C6;
+}
+.sec7 .socialC .social div p{
+    font-size: 1.4vw;
+    color: var(--paragraph-light);
+}
+.sec7 .textC .terms{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 3vw;
+    border-top: 1px dashed #9BA5C6;
+    font-size: 1.4vw;
+    margin-top: 5vw;
+    color: var(--paragraph-light);
+}
+
+@media (orientation: portrait) {
+    p {
+        line-height: 3.7vw;
+        letter-spacing: -0.3vw
+    }
+    .sec1 nav{
+        padding: 2vw 4vw;
+    }
+    .sec1 nav ul{
+        gap: 4vw;
+        font-size: 1.4vw
+    }
+    .sec1 nav #logo h1{
+        font-size: 3vw;
+    }
+    .sec1 nav button{
+        padding: 1.4vw 2.5vw;
+    }
+    .sec1 .h1C{
+        gap: 7vw;
+    }
+    .sec1 .h1C h1{
+        font-size: 14vw;
+        line-height: 13vw;
+    }
+    .sec1 .h1C h2{
+        font-size: 15vw;
+    }
+    .sec1 .h1C h3{
+        font-size: 5vw;
+        top: -23%;
+    }
+    .sec1 .h1C p{
+        width: 70%;
+        font-size: 2.5vw;
+    }
+    .sec2{
+        flex-direction: column;
+        gap: 10vw;
+    }
+    .sec2 .left{
+        display: flex;
+        flex-direction: column;
+        gap: 4vw;
+        width: 100%;
+    }
+    .sec2 .left h2{
+        color: var(--accent);
+        font-size: 5vw;
+    }
+    .sec2 .left h1{
+        font-size: 7vw;
+        line-height: 7vw;
+    }
+    .sec2 .left p{
+        font-size: 2.5vw;
+    }
+    .sec2 .left div{
+        padding: 3vw 0;
+    }
+    .sec2 .left div button{
+        font-size: 1.5vw;
+        padding: 1vw 2.5vw;
+    }
+    .sec2 .right{
+        width: 100%;
+        border-left: none;
+    }
+    .sec2 .right div{
+        gap: 1vw;
+        padding: 4vw;
+    }
+    .sec2 .right div h1{
+        font-size: 7vw;
+        gap: 1vw;
+    }
+    .sec2 .right div h1 span{
+        font-size: 5vw;
+    }
+    .sec2 .right div p{
+        font-size: 2.5vw
+    }
+    .sec3{
+        width: 100vw;
+        padding: 0vw 4vw;
+        gap: 8vw;
+        padding-bottom: 12vw
+    }
+    .sec3 .textC,
+    .sec4 .textC,
+    .sec5 .textC{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .sec3 .textC h1,
+    .sec4 .textC h1,
+    .sec5 .textC h1,
+    .sec7 .textC .h1C h1{
+        font-size: 7vw;
+        width: 90%;
+    }
+    .sec6 .textC .h1C{
+        flex-direction: column-reverse;
+    }
+    .sec6 .textC .h1C h1{
+        font-size: 7vw;
+        width: 105%;
+    }
+    .sec3 .textC span,
+    .sec4 .textC span,
+    .sec5 .textC span,
+    .sec6 .textC .h1C span,
+    .sec7 .textC .h1C span{
+        font-size: 5vw;
+        font-weight: 600;
+    }
+    .sec3 .textC p,
+    .sec4 .textC p,
+    .sec5 .textC p,
+    .sec6 .textC p{
+        width: 90%;
+        font-size: 2.5vw
+    }
+    .sec3 .imgC{
+        height: 20vh;
+    }
+    .sec3 .imgC div{
+        height: 20vh;
+    }
+    .sec3 .imgC div h1{
+        width: 100%;
+        padding: 1vw;
+        line-height: 3vw;
+        font-weight: 600;
+    }
+    .sec7{
+        padding: 8vw 4vw;
+        padding-bottom: 5vw;
+    }
+    .sec7 .textC .h1C{
+        flex-direction: column-reverse;
+    }
+    .sec7 .textC{
+        gap: 10vw;
+        
+    }
+    .sec7 p{
+        font-size: 2.5vw
+    }
+    .sec7 .textC .contend{
+        gap: 7vw;
+        margin-top: 10vw;
+        flex-direction: column;
+    }
+    .sec7 .textC .contend .aboutC{
+        flex-direction: column;
+        gap: 1vw;
+    }
+    .sec7 .textC .contend .aboutC h1{
+        font-size: 5vw;
+    }
+    .sec7 .textC .contend .mailC{
+        gap: 2vw;
+    }
+    .sec7 .textC .contend .mailC h2{
+        font-size: 3vw;
+    }
+    .sec7 .socialC{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        gap: 10vw;
+    }
+    .sec7 .socialC img{
+        width: 40vw;
+        height: 25vw;
+        object-fit: cover;
+    }
+    .sec7 .socialC .social{
+        gap: 5vw;
+    }
+    .sec7 .socialC .social div h2{
+        font-size: 4vw;
+        color: #9BA5C6;
+    }
+    .sec7 .socialC .social div p{
+        font-size: 2.2vw;
+    }
+    .sec7 .textC .terms{
+        padding: 2vw 4vw;
+        border-top: 1px dashed #9BA5C6;
+        margin-top: 7vw;
+    }
+}
+</style>
+</head>
+<body>
+    <div id="fixed"></div>
+        <!--(element)C = element-container-->
+    <section class="sec1">
+        <nav>
+            <div id="logo"><h1>Aurora.</h1></div>
+            <ul>
+                <li>Features</li>
+                <li>Pricing</li>
+                <li>About Us</li>
+                <li>FAQ</li>
+            </ul>
+            <button>Register</button>
+        </nav>
+        <div class="h1C">
+            <h2>*</h2>
+            <h1>HANDY BANKING</h1>
+            <h3>/01</h3>
+            <p>Money should be easey, it's time to say goodbye to banks & financial services companies that don't work for you</p>
+        </div>
+    </section>
+    <section class="sec2">
+        <div class="left">
+            <h2>/02</h2>
+            <h1>GET TO KNOW MORE ABOUT AURORA</h1>
+            <p>Aurora: Empowering secure and seamless payments.  We offer innovative solutions for individuals and businesses.  Experience the future of finance with Aurora.
+            </p>
+            <div>
+                <button>About Aurora</button>
+                <button>Financial Statements</button>
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                <h1>379<span>K</span></h1>
+                <p>Aurora's users from all over the world</p>
+            </div>
+            <div>
+                <h1>734<span>M</span></h1>
+                <p>Aurora's revenue in the first quarter</p>
+            </div>
+            <div>
+                <h1>198<span>%</span></h1>
+                <p>Aurora's investment growth in</p>
+            </div>
+        </div>
+    </section>
+    <section class="sec3">
+        <div class="textC">
+            <h1>
+                <span>/03</span>
+                DISCOVER OUR BEST FEATURES
+            </h1>
+            <p>Aurora is more of a mindset than technology or industry, our product is designed by industry veteransto solve this problems</p>
+        </div>
+        <div class="imgC">
+            <div id="box1">
+                <h1>MULTI <br> CURRENCY</h1>
+            </div>
+            <div id="box2">
+                <h1>MULTI <br> PLATFORM</h1>
+            </div>
+            <div id="box3">
+                <h1>MULTI <br> DEVICE</h1>
+            </div>
+        </div>
+    </section>
+    <section class="sec4">
+        <div class="textC">
+            <h1>
+                <span>/04</span>
+                LET'S LEARN HOW WE WORK
+            </h1>
+            <p>Your journey is seamless, safe and secure. No need to register or download apps. No need to enter card details</p>
+        </div>
+        <div class="videoC">
+            <video src="video.mp4"></video>
+            <div id="play">
+                <div class="before"></div>
+            </div>
+        </div>
+    </section>
+    <section class="sec5">
+        <div class="textC">
+            <h1>
+                <span>/05</span>
+                ADVANTAGES OF OUR SERVICES
+            </h1>
+            <p>Aurora empowering people around the world to live a more fulfilling life through financial independence</p>
+        </div>
+        <div class="advantageC">
+            <div data-image="stock2/stock1.jpg">
+                <h2>INTEGRATION TO ANY PLATFROM</h2>
+                <span>
+                    <svg height="4vw" viewBox="0 -960 960 960" fill=""><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                </span>
+            </div>
+            <div data-image="stock2/stock2.jpg">
+                <h2>ADVANCE PAYER VERIFICATION</h2>
+                <span>
+                    <svg height="4vw" viewBox="0 -960 960 960" fill=""><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                </span>
+            </div>
+            <div data-image="stock2/stock3.jpg">
+                <h2>FIRST CLASS SUPPORT</h2>
+                <span>
+                    <svg height="4vw" viewBox="0 -960 960 960" fill=""><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                </span>
+            </div>
+            <div data-image="stock2/stock4.jpg">
+                <h2>FREE OF CHARGE PAYMENTS</h2>
+                <span>
+                    <svg height="4vw" viewBox="0 -960 960 960" fill=""><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                </span>
+            </div>
+        </div>
+        <div class="infiniteC">
+            <h1>REGISTER NOW</h1><span></span>
+            <h1>REGISTER NOW</h1><span></span>
+            <h1>REGISTER NOW</h1><span></span>
+            <h1>REGISTER NOW</h1><span></span>
+            <h1>REGISTER NOW</h1><span></span>
+            <h1>REGISTER NOW</h1><span></span>
+            <h1>REGISTER NOW</h1><span></span>
+            <h1>REGISTER NOW</h1><span></span>
+        </div>
+    </section>
+    <section class="sec6">
+        <span class="light" id="light1"></span>
+        <span class="light" id="light2"></span>
+        <div class="textC">
+            <div class="h1C">
+                <h1>MEET OUR MOST TRUSTED PARTNERS</h1>
+                <span>/06</span>
+            </div>
+            <p>
+                Aurora adaptable to meet the specific processing requirements of global companies. Our product supports numerous local bank channel integration around the world
+            </p>
+        </div>
+        <div class="logoC">
+            <div>
+                <svg height="15vw" fill="var(--paragraph-light)" viewBox="0 0 32 32">
+                    <path d="M32 13.333l-4.177 9.333h-1.292l1.552-3.266-2.75-6.068h1.359l1.99 4.651h0.026l1.927-4.651zM14.646 16.219v3.781h-1.313v-9.333h3.474c0.828-0.021 1.63 0.266 2.25 0.807 0.615 0.505 0.953 1.219 0.943 1.974 0.010 0.766-0.339 1.5-0.943 1.979-0.604 0.531-1.354 0.792-2.25 0.792zM14.641 11.818v3.255h2.198c0.484 0.016 0.958-0.161 1.297-0.479 0.339-0.302 0.526-0.714 0.526-1.141 0-0.432-0.188-0.844-0.526-1.141-0.349-0.333-0.818-0.51-1.297-0.495zM22.63 13.333c0.833 0 1.495 0.234 1.979 0.698s0.724 1.099 0.724 1.906v3.859h-1.083v-0.87h-0.047c-0.469 0.714-1.089 1.073-1.865 1.073-0.667 0-1.219-0.203-1.667-0.615-0.438-0.385-0.682-0.948-0.672-1.531 0-0.646 0.234-1.161 0.708-1.547 0.469-0.38 1.099-0.573 1.885-0.573 0.672 0 1.224 0.13 1.656 0.385v-0.271c0.005-0.396-0.167-0.776-0.464-1.042-0.297-0.276-0.688-0.432-1.094-0.427-0.63 0-1.13 0.276-1.5 0.828l-0.995-0.646c0.547-0.818 1.359-1.229 2.432-1.229zM21.167 17.88c-0.005 0.302 0.135 0.583 0.375 0.766 0.25 0.203 0.563 0.313 0.88 0.307 0.474 0 0.932-0.198 1.271-0.547 0.359-0.333 0.563-0.802 0.563-1.292-0.354-0.292-0.844-0.438-1.474-0.438-0.464 0-0.844 0.115-1.151 0.344-0.307 0.234-0.464 0.516-0.464 0.859zM5.443 10.667c1.344-0.016 2.646 0.479 3.641 1.391l-1.552 1.521c-0.568-0.526-1.318-0.813-2.089-0.797-1.385 0.005-2.609 0.891-3.057 2.198-0.229 0.661-0.229 1.38 0 2.042 0.448 1.307 1.672 2.193 3.057 2.198 0.734 0 1.365-0.182 1.854-0.505 0.568-0.375 0.964-0.958 1.083-1.625h-2.938v-2.052h5.13c0.063 0.359 0.094 0.719 0.094 1.083 0 1.625-0.594 3-1.62 3.927-0.901 0.813-2.135 1.286-3.604 1.286-2.047 0.010-3.922-1.125-4.865-2.938-0.771-1.505-0.771-3.286 0-4.792 0.943-1.813 2.818-2.948 4.859-2.938z"></path></svg>
+            </div>
+            <div>
+                <svg height="15vw" fill="var(--paragraph-light)" viewBox="0 0 32 32">
+    <path d="M5.849 11.047c-0.376 0.448-0.975 0.803-1.573 0.751-0.079-0.604 0.219-1.251 0.563-1.652 0.375-0.457 1.031-0.785 1.563-0.812 0.063 0.631-0.183 1.251-0.552 1.713zM6.396 11.917c-0.869-0.053-1.615 0.499-2.027 0.499-0.421 0-1.052-0.473-1.739-0.457-0.891 0.011-1.724 0.52-2.177 1.339-0.943 1.629-0.245 4.041 0.661 5.369 0.443 0.656 0.973 1.375 1.672 1.355 0.661-0.027 0.927-0.437 1.724-0.437 0.807 0 1.036 0.437 1.74 0.421 0.723-0.011 1.181-0.656 1.624-1.312 0.505-0.745 0.713-1.475 0.724-1.511-0.011-0.016-1.401-0.552-1.411-2.167-0.011-1.355 1.093-2 1.14-2.037-0.62-0.937-1.599-1.036-1.932-1.061zM11.412 10.083v9.855h1.515v-3.369h2.095c1.911 0 3.255-1.328 3.255-3.245 0-1.921-1.317-3.24-3.203-3.24zM12.927 11.375h1.745c1.312 0 2.063 0.708 2.063 1.953s-0.751 1.959-2.073 1.959h-1.735zM21.036 20.011c0.953 0 1.833-0.484 2.235-1.256h0.032v1.183h1.4v-4.907c0-1.416-1.124-2.337-2.859-2.337-1.604 0-2.792 0.932-2.833 2.208h1.359c0.115-0.609 0.667-1.005 1.433-1.005 0.927 0 1.443 0.437 1.443 1.24v0.541l-1.885 0.115c-1.761 0.109-2.709 0.833-2.709 2.099 0 1.276 0.98 2.12 2.385 2.12zM21.448 18.844c-0.808 0-1.323-0.391-1.323-0.989 0-0.62 0.495-0.985 1.437-1.043l1.683-0.104v0.557c0 0.923-0.776 1.579-1.803 1.579zM26.573 22.62c1.473 0 2.167-0.573 2.771-2.297l2.656-7.531h-1.536l-1.781 5.817h-0.032l-1.781-5.817h-1.583l2.563 7.172-0.136 0.437c-0.235 0.735-0.609 1.020-1.276 1.020-0.12 0-0.349-0.015-0.443-0.025v1.183c0.088 0.025 0.464 0.036 0.573 0.036z"></path></svg>
+            </div>
+            <div>
+                <svg height="15vw" fill="var(--paragraph-light)" viewBox="0 0 32 32">
+    <path d="M15.854 11.329l-2.003 9.367h-2.424l2.006-9.367zM26.051 17.377l1.275-3.518 0.735 3.518zM28.754 20.696h2.242l-1.956-9.367h-2.069c-0.003-0-0.007-0-0.010-0-0.459 0-0.853 0.281-1.019 0.68l-0.003 0.007-3.635 8.68h2.544l0.506-1.4h3.109zM22.429 17.638c0.010-2.473-3.419-2.609-3.395-3.714 0.008-0.336 0.327-0.694 1.027-0.785 0.13-0.013 0.28-0.021 0.432-0.021 0.711 0 1.385 0.162 1.985 0.452l-0.027-0.012 0.425-1.987c-0.673-0.261-1.452-0.413-2.266-0.416h-0.001c-2.396 0-4.081 1.275-4.096 3.098-0.015 1.348 1.203 2.099 2.122 2.549 0.945 0.459 1.262 0.754 1.257 1.163-0.006 0.63-0.752 0.906-1.45 0.917-0.032 0.001-0.071 0.001-0.109 0.001-0.871 0-1.691-0.219-2.407-0.606l0.027 0.013-0.439 2.052c0.786 0.315 1.697 0.497 2.651 0.497 0.015 0 0.030-0 0.045-0h-0.002c2.546 0 4.211-1.257 4.22-3.204zM12.391 11.329l-3.926 9.367h-2.562l-1.932-7.477c-0.037-0.364-0.26-0.668-0.57-0.82l-0.006-0.003c-0.688-0.338-1.488-0.613-2.325-0.786l-0.066-0.011 0.058-0.271h4.124c0 0 0.001 0 0.001 0 0.562 0 1.028 0.411 1.115 0.948l0.001 0.006 1.021 5.421 2.522-6.376z"></path></svg>
+            </div>
+            <div>
+                <svg height="15vw" fill="var(--paragraph-light)" viewBox="0 0 32 32"><path d="M8.25 10.435l-2.165 0.46-0.010 7.12c0 1.315 0.99 2.165 2.305 2.165 0.73 0 1.265-0.135 1.56-0.295v-1.69c-0.285 0.115-1.685 0.525-1.685-0.785v-3.16h1.685v-1.89h-1.685zM12.705 13.015l-0.135-0.655h-1.92v7.66h2.215v-5.155c0.525-0.69 1.41-0.555 1.695-0.465v-2.040c-0.3-0.105-1.335-0.3-1.855 0.655zM17.32 9.4l-2.23 0.475v1.81l2.23-0.475zM2.245 14.615c0-0.345 0.29-0.48 0.755-0.485 0.675 0 1.535 0.205 2.21 0.57v-2.090c-0.735-0.29-1.47-0.405-2.205-0.405-1.8 0-3 0.94-3 2.51 0 2.46 3.375 2.060 3.375 3.12 0 0.41-0.355 0.545-0.85 0.545-0.735 0-1.685-0.305-2.43-0.71v2c0.825 0.355 1.66 0.505 2.425 0.505 1.845 0 3.115-0.79 3.115-2.39 0-2.645-3.395-2.17-3.395-3.17zM32 16.28c0-2.275-1.1-4.070-3.21-4.070s-3.395 1.795-3.395 4.055c0 2.675 1.515 3.91 3.675 3.91 1.060 0 1.855-0.24 2.46-0.575v-1.67c-0.605 0.305-1.3 0.49-2.18 0.49-0.865 0-1.625-0.305-1.725-1.345h4.345c0.010-0.115 0.030-0.58 0.030-0.795zM27.605 15.44c0-1 0.615-1.42 1.17-1.42 0.545 0 1.125 0.42 1.125 1.42zM21.96 12.21c-0.87 0-1.43 0.41-1.74 0.695l-0.115-0.55h-1.955v10.24l2.22-0.47 0.005-2.51c0.32 0.235 0.795 0.56 1.57 0.56 1.59 0 3.040-1.16 3.040-3.98 0.005-2.58-1.465-3.985-3.025-3.985zM21.43 18.335c-0.52 0-0.83-0.19-1.045-0.42l-0.015-3.3c0.23-0.255 0.55-0.44 1.060-0.44 0.81 0 1.37 0.91 1.37 2.070 0.005 1.195-0.545 2.090-1.37 2.090zM15.095 20.020h2.23v-7.66h-2.23z"></path></svg>
+            </div>
+            <div>
+                <svg height="15vw" fill="var(--paragraph-light)" viewBox="0 0 90 90">
+                    <path d="M 0 35.499 h 5.308 c 1.424 -0.019 2.816 0.425 3.965 1.267 c 0.869 0.695 1.439 1.697 1.59 2.8 c 0.225 1.411 -0.104 2.855 -0.918 4.029 c -0.775 1.007 -1.877 1.713 -3.117 1.995 c -1.4 0.374 -2.857 0.241 -4.288 0.266 v 4.884 H 0.006 V 35.499 M 2.54 37.773 v 5.79 c 0.836 0 1.666 0 2.502 0 c 1.055 0.014 2.063 -0.432 2.762 -1.223 c 0.521 -0.716 0.691 -1.628 0.462 -2.483 C 8.136 39.271 7.796 38.753 7.31 38.4 c -0.659 -0.432 -1.435 -0.653 -2.223 -0.633 H 2.553 M 14.519 40.414 c 1.133 -0.548 2.424 -0.676 3.642 -0.361 c 0.85 0.219 1.603 0.713 2.141 1.406 c 0 -0.456 0 -0.912 0 -1.375 h 2.375 c 0 3.554 0 7.101 0 10.655 h -2.356 c 0 -0.507 0 -1.014 0 -1.527 c -0.779 0.999 -1.948 1.616 -3.212 1.698 c -1.042 0.144 -2.103 -0.036 -3.041 -0.513 c -1.091 -0.597 -1.92 -1.579 -2.325 -2.755 c -0.459 -1.301 -0.459 -2.721 0 -4.022 C 12.23 42.238 13.221 41.093 14.519 40.414 M 16.419 42.131 c -1.352 0.349 -2.355 1.485 -2.534 2.87 c -0.155 1.204 0.324 2.402 1.267 3.167 c 1.367 0.92 3.2 0.708 4.32 -0.5 c 1.264 -1.463 1.129 -3.668 -0.304 -4.966 c -0.758 -0.597 -1.747 -0.816 -2.686 -0.595 M 40.135 39.933 c 1.198 -0.1 2.397 0.179 3.427 0.798 c 1.068 0.655 1.869 1.667 2.261 2.857 c 0.499 1.486 0.376 3.11 -0.342 4.504 c -0.571 1.079 -1.491 1.932 -2.61 2.42 c -2.759 1.294 -6.044 0.106 -7.338 -2.652 c -0.872 -1.859 -0.639 -4.049 0.604 -5.684 C 37.081 40.882 38.54 40.064 40.135 39.933 M 39.856 42.276 c -0.736 0.178 -1.375 0.631 -1.786 1.267 c -0.617 0.94 -0.738 2.122 -0.323 3.167 c 0.227 0.585 0.627 1.087 1.147 1.438 c 0.882 0.575 1.993 0.667 2.958 0.247 c 0.693 -0.31 1.248 -0.865 1.558 -1.558 c 0.418 -0.924 0.418 -1.983 0 -2.908 C 42.75 42.624 41.281 41.94 39.856 42.276 M 50.188 41.453 c 0.889 -1.059 2.224 -1.639 3.604 -1.565 c 1.093 -0.028 2.148 0.404 2.908 1.191 c 0.783 0.974 1.188 2.197 1.14 3.446 c 0 2.071 0 4.143 0 6.214 h -2.458 v -5.904 c 0.022 -0.67 -0.156 -1.332 -0.513 -1.9 c -0.277 -0.392 -0.686 -0.671 -1.153 -0.785 c -0.829 -0.198 -1.704 -0.024 -2.394 0.475 c -0.513 0.384 -0.876 0.935 -1.026 1.558 c -0.092 0.471 -0.124 0.952 -0.095 1.432 v 5.15 h -2.426 v -10.68 h 2.426 v 1.368 M 63.604 40.04 c 1.509 -0.375 3.106 -0.094 4.396 0.773 c 0.986 0.698 1.676 1.74 1.932 2.92 c 0.156 0.769 0.18 1.56 0.07 2.337 h -8.095 c 0.106 0.94 0.626 1.783 1.419 2.299 c 1.508 0.837 3.402 0.431 4.434 -0.95 l 1.9 1.045 c -0.544 0.934 -1.391 1.654 -2.401 2.04 c -1.165 0.461 -2.438 0.578 -3.668 0.336 c -1.125 -0.217 -2.143 -0.809 -2.889 -1.679 c -0.785 -0.964 -1.23 -2.159 -1.267 -3.402 c -0.083 -1.185 0.214 -2.366 0.849 -3.37 c 0.752 -1.175 1.931 -2.013 3.288 -2.337 M 63.364 42.34 c -0.691 0.416 -1.173 1.107 -1.324 1.9 h 5.524 c -0.072 -0.66 -0.408 -1.263 -0.931 -1.672 c -0.958 -0.695 -2.23 -0.776 -3.269 -0.209 M 73.765 40.959 c 1.047 -0.749 2.32 -1.114 3.604 -1.033 c 1.342 0.06 2.608 0.642 3.528 1.622 c 0.798 0.891 1.248 2.041 1.267 3.237 c 0.016 0.436 -0.003 0.872 -0.057 1.305 h -8.083 c 0.099 0.922 0.603 1.753 1.375 2.268 c 1.512 0.884 3.448 0.489 4.491 -0.918 l 1.9 1.045 c -0.697 1.166 -1.842 1.995 -3.167 2.293 c -1.424 0.382 -2.937 0.245 -4.269 -0.386 c -1.004 -0.515 -1.803 -1.354 -2.268 -2.382 c -0.487 -1.11 -0.647 -2.336 -0.462 -3.535 c 0.221 -1.41 0.994 -2.675 2.147 -3.516 M 75.431 42.39 c -0.656 0.419 -1.114 1.087 -1.267 1.85 h 5.524 c -0.069 -0.712 -0.443 -1.359 -1.026 -1.774 c -0.971 -0.641 -2.219 -0.683 -3.231 -0.108 M 88.1 40.129 c 0.623 -0.166 1.278 -0.166 1.9 0 c 0 0.747 0 1.501 0 2.255 c -0.82 -0.217 -1.69 -0.139 -2.458 0.222 c -0.564 0.306 -0.98 0.827 -1.153 1.444 c -0.13 0.554 -0.174 1.124 -0.133 1.691 v 4.998 h -2.407 c 0 -3.547 0 -7.101 0 -10.655 c 0.804 0 1.603 0 2.407 0 v 1.495 c 0.394 -0.71 1.055 -1.232 1.837 -1.451 M 24.115 40.091 h 2.756 l 2.622 7.601 l 2.939 -7.601 h 2.616 c -1.993 4.793 -3.995 9.597 -6.005 14.411 h -2.616 c 0.545 -1.267 1.083 -2.489 1.634 -3.737 c -1.311 -3.554 -2.635 -7.101 -3.946 -10.655 L 24.115 40.091 z"/>
+                </svg>
+            </div>
+            <div>
+                <svg height="15vw" fill="var(--paragraph-light)" viewBox="0 0 90 90">
+                
+                    <path d="M 18.898 33.653 H 3.605 C 1.613 33.653 0 35.28 0 37.289 v 15.423 c 0 2.007 1.613 3.635 3.605 3.635 h 15.294 c 1.991 0 3.603 -1.628 3.603 -3.635 V 37.289 C 22.502 35.28 20.89 33.653 18.898 33.653" />
+                    <path d="M 6.08 51.105 c -3.501 0 -4.536 -2.781 -2.806 -4.302 c 0.577 -0.514 1.632 -0.765 2.195 -0.822 c 2.079 -0.207 4.004 0.593 6.276 1.711 C 10.149 49.793 8.115 51.105 6.08 51.105 M 18.526 47.903 c -0.9 -0.304 -2.109 -0.769 -3.454 -1.26 c 0.808 -1.417 1.454 -3.03 1.878 -4.784 h -4.436 v -1.611 h 5.433 v -0.899 h -5.433 v -2.686 h -2.217 c -0.389 0 -0.389 0.387 -0.389 0.387 v 2.299 H 4.413 v 0.899 h 5.495 v 1.611 H 5.371 v 0.899 h 8.8 c -0.322 1.119 -0.754 2.169 -1.267 3.124 c -2.855 -0.95 -5.902 -1.72 -7.816 -1.246 c -1.224 0.304 -2.013 0.847 -2.476 1.416 C 0.485 48.659 2.01 52.622 6.5 52.622 c 2.654 0 5.212 -1.493 7.193 -3.952 c 2.956 1.433 8.809 3.894 8.809 3.894 v -3.507 C 22.502 49.056 21.767 48.997 18.526 47.903" fill="var(--dark)"/>
+                    <path d="M 48.86 36.975 c 0 1.174 0.858 1.964 2.055 1.964 s 2.055 -0.79 2.055 -1.964 c 0 -1.151 -0.858 -1.964 -2.055 -1.964 S 48.86 35.824 48.86 36.975" />
+                    <path d="M 43.126 51.99 h 3.567 V 35.508 h -3.567 V 51.99 z" />
+                    <path d="M 31.678 46.278 L 33.8 38.94 h 0.091 l 2.01 7.338 H 31.678 z M 36.871 36.072 h -4.787 L 26.733 51.99 h 3.297 l 0.903 -3.116 H 36.6 l 0.858 3.116 h 4.223 L 36.871 36.072 z" />
+                    <path d="M 49.131 51.99 h 3.567 V 39.888 h -3.567 V 51.99 z" />
+                    <path d="M 89.978 39.91 L 90 39.888 h -3.364 l -2.122 7.361 h -0.113 l -2.438 -7.361 h -3.997 l 4.81 12.147 l -2.01 3.703 v 0.09 h 3.138 L 89.978 39.91 z" />
+                    <path d="M 59.315 49.913 c -0.406 0 -0.79 -0.045 -1.219 -0.181 v -6.548 c 0.745 -0.519 1.355 -0.768 2.122 -0.768 c 1.332 0 2.393 1.061 2.393 3.319 C 62.612 48.626 61.054 49.913 59.315 49.913 M 61.573 39.64 c -1.31 0 -2.326 0.497 -3.477 1.445 v -1.197 h -3.568 v 15.941 h 3.568 v -3.951 c 0.677 0.181 1.309 0.271 2.077 0.271 c 3.184 0 6.051 -2.348 6.051 -6.525 C 66.224 41.875 64.147 39.64 61.573 39.64" />
+                    <path d="M 73.698 49.055 c -0.948 0.519 -1.49 0.722 -2.122 0.722 c -0.858 0 -1.4 -0.564 -1.4 -1.468 c 0 -0.339 0.068 -0.677 0.338 -0.948 c 0.429 -0.429 1.265 -0.745 3.184 -1.197 V 49.055 z M 77.266 48.964 v -5.057 c 0 -2.755 -1.625 -4.267 -4.493 -4.267 c -1.829 0 -3.093 0.316 -5.396 1.016 l 0.632 2.777 c 2.1 -0.948 3.026 -1.355 3.997 -1.355 c 1.174 0 1.693 0.835 1.693 2.122 v 0.09 c -4.087 0.768 -5.351 1.197 -6.142 1.987 c -0.587 0.587 -0.835 1.422 -0.835 2.393 c 0 2.326 1.806 3.568 3.5 3.568 c 1.264 0 2.28 -0.474 3.658 -1.513 l 0.248 1.265 h 3.567 L 77.266 48.964 z" />
+                </svg>
+            </div>
+        </div>
+    </section>
+    <div class="scrollLoop">
+        <div class="infiniteC">
+            <h1>REGISTER NOW</h1>
+            <button>REGISTER NOW</button>
+            <h1>REGISTER NOW</h1>
+            <button>REGISTER NOW</button>
+            <h1>REGISTER NOW</h1>
+            <button>REGISTER NOW</button>
+            <h1>REGISTER NOW</h1>
+            <button>REGISTER NOW</button>
+        </div>
+    </div>
+    <section class="sec7">
+        <span class="light" id="light3"></span>
+        <div class="textC">
+            <div class="h1C">
+                <h1>KEEP IN TOUCH WITH US</h1>
+                <span>/07</span>
+            </div>
+            <div class="contend">
+                <div class="aboutC">
+                    <h1>Aurora <span>.</span></h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="mailC">
+                    <p>Email</p>
+                    <h2>INFO.AURORA@AURORA.COM</h2>
+                    <h2>ADMIN.AURORA@AURORA.COM</h2>
+                </div>
+            </div>
+            <div class="socialC">
+                <img src="map.jpg">
+                <div class="social">
+                    <div class="insta">
+                        <p>Instagram</p>
+                        <h2>@AURORA.BANK</h2>
+                    </div>
+                    <div class="twitter">
+                        <p>X (twitter)</p>
+                        <h2>@AURORA.BANK</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="terms">
+                <p>Terms and Conditions</p>
+                <p>Privacy Policy</p>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+    let play = document.querySelector('#play');
+    let icon = document.querySelector('.before');
+    let video = document.querySelector('video')
+    
+    let host = true;
+    let host2 = true;
+    play.onclick = function() {
+        if (host == true) {
+            host = false;
+            video.play();
+            icon.style = 'clip-path: polygon(0% 0%, 0% 100%, 34% 100%, 34% 0, 70% 0, 70% 100%, 100% 100%, 18% 100%, 100% 100%, 100% 0%);'
+            play.style = 'opacity: 0; pointer-events: none'
+            host2 = false;
+        }
+        else {
+            host = true;
+            video.pause();
+            icon.style = 'clip-path: polygon(100% 50%, 16% 0, 16% 100%);'
+        }
+    }
+    
+    video.onclick = function() {
+        if (host2 == true) {
+            host2 = false;
+            play.style = 'opacity: 0; pointer-events: none'
+        }
+        else {
+            host2 = true;
+            play.style = 'opacity: 1; pointer-events: visible'
+        }
+    }
+    
+    let fixed = document.querySelector('#fixed')
+    let advt = document.querySelector('.advantageC');
+    
+    let box = document.querySelectorAll('.advantageC div')
+    
+    advt.addEventListener('mouseenter', function() {
+        box.forEach(function(e) {
+            e.addEventListener('mouseenter', function() {
+                var img = e.getAttribute('data-image')
+                fixed.style = `background-image: url(${img}); display: block`
+            })
+        })
+    
+    })
+    advt.addEventListener('mouseleave', function() {
+        fixed.style = 'display: none'
+    })
+    advt.addEventListener('touchstart', function() {
+        box.forEach(function(e) {
+            e.addEventListener('touchstart', function() {
+                var img = e.getAttribute('data-image')
+                fixed.style = `background-image: url(${img}); display: block`
+            })
+        })
+    
+    })
+    advt.addEventListener('touchend', function() {
+        fixed.style = 'display: none'
+    })
+    
+    gsap.to('.scrollLoop .infiniteC', {
+        transform: 'translateX(-40%)',
+        scrollTrigger: {
+            scroller: 'body',
+            trigger: '.scrollLoop .infiniteC',
+            scrub: 1,
+        }
+    })
+</script>
+</html>
